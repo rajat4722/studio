@@ -13,44 +13,42 @@ import {
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 
-const ProjectsContent = () => (
+export interface Project {
+  name: string;
+  description: string;
+  techStack: string[];
+  image: string;
+  hint: string;
+}
+
+const ProjectContent = ({ project }: { project: Project }) => (
   <>
     <DialogHeader>
-      <DialogTitle>My Projects</DialogTitle>
+      <DialogTitle>{project.name}</DialogTitle>
       <DialogDescription>
-        Here are some of the projects I've worked on.
+        Here are the details for this project.
       </DialogDescription>
     </DialogHeader>
     <div className="space-y-6">
       <div>
-        <h3 className="font-bold">Sales CRM (Web & Android App)</h3>
         <p className="text-sm text-muted-foreground mt-2">
-          A comprehensive Sales CRM platform, available on both web and Android, designed to streamline sales workflows and enhance customer relationship management. This system provides a centralized hub for managing customer data, tracking agent productivity, and automating key sales tasks, leading to a more efficient sales process and measurable business growth.
+          {project.description}
         </p>
-        <div className="mt-4">
-          <h4 className="text-sm font-semibold mb-2">Tech Stack:</h4>
-          <div className="flex flex-wrap gap-2">
-            <Badge variant="secondary">Flutter</Badge>
-            <Badge variant="secondary">Firestore</Badge>
-            <Badge variant="secondary">FCM</Badge>
-            <Badge variant="secondary">Node.js</Badge>
-            <Badge variant="secondary">SQL</Badge>
-            <Badge variant="secondary">GCP</Badge>
-            <Badge variant="secondary">REST APIs</Badge>
+        {project.techStack && project.techStack.length > 0 && (
+          <div className="mt-4">
+            <h4 className="text-sm font-semibold mb-2">Tech Stack:</h4>
+            <div className="flex flex-wrap gap-2">
+              {project.techStack.map((tech) => (
+                <Badge key={tech} variant="secondary">{tech}</Badge>
+              ))}
+            </div>
           </div>
-        </div>
-      </div>
-      <div>
-        <h3 className="font-bold">Fintech Mobile App</h3>
-        <p className="text-sm text-muted-foreground mt-2">A secure and intuitive fintech mobile app for managing personal finances, built with modern security practices.</p>
-      </div>
-      <div>
-        <h3 className="font-bold">Portfolio Website</h3>
-        <p className="text-sm text-muted-foreground mt-2">This very website, built with Next.js and Tailwind CSS to showcase my work and skills.</p>
+        )}
       </div>
     </div>
   </>
 );
+
 
 const AboutContent = () => (
   <>
@@ -91,7 +89,6 @@ const ContactContent = () => (
 );
 
 const navLinks = [
-  { label: "Projects", content: <ProjectsContent /> },
   { label: "About", content: <AboutContent /> },
   { label: "Contact", content: <ContactContent /> },
 ];
@@ -125,10 +122,10 @@ export function Header() {
   );
 }
 
-export const ProjectsTrigger = ({ children }: { children: React.ReactNode }) => (
+export const ProjectsTrigger = ({ children, project }: { children: React.ReactNode, project: Project }) => (
   <Dialog>
     <DialogTrigger asChild>{children}</DialogTrigger>
-    <DialogContent><ProjectsContent /></DialogContent>
+    <DialogContent><ProjectContent project={project} /></DialogContent>
   </Dialog>
 );
 

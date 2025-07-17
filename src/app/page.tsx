@@ -5,6 +5,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ProjectCarousel } from '@/components/project-carousel';
+import type { Project } from '@/components/header';
 
 const CodeIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -78,10 +79,28 @@ const techIcons = [
   },
 ];
 
-const projects = [
-  { name: 'Sales CRM (Web & Android App)', image: 'https://placehold.co/600x400.png', hint: 'crm dashboard mobile' },
-  { name: 'Fintech Mobile App', image: 'https://placehold.co/600x400.png', hint: 'finance mobile' },
-  { name: 'Portfolio Website', image: 'https://placehold.co/600x400.png', hint: 'personal portfolio' },
+const projects: Project[] = [
+  { 
+    name: 'Sales CRM (Web & Android App)', 
+    image: 'https://placehold.co/600x400.png', 
+    hint: 'crm dashboard mobile',
+    description: "A comprehensive Sales CRM platform, available on both web and Android, designed to streamline sales workflows and enhance customer relationship management. This system provides a centralized hub for managing customer data, tracking agent productivity, and automating key sales tasks, leading to a more efficient sales process and measurable business growth.",
+    techStack: ["Flutter", "Firestore", "FCM", "Node.js", "SQL", "GCP", "REST APIs"]
+  },
+  { 
+    name: 'Fintech Mobile App', 
+    image: 'https://placehold.co/600x400.png', 
+    hint: 'finance mobile',
+    description: "A secure and intuitive fintech mobile app for managing personal finances, built with modern security practices.",
+    techStack: ["Flutter", "Firebase", "Node.js"]
+  },
+  { 
+    name: 'Portfolio Website', 
+    image: 'https://placehold.co/600x400.png', 
+    hint: 'personal portfolio',
+    description: "This very website, built with Next.js and Tailwind CSS to showcase my work and skills.",
+    techStack: ["Next.js", "React", "Tailwind CSS", "ShadCN UI", "TypeScript"]
+  },
 ];
 
 const socialLinks = [
@@ -167,9 +186,9 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                      <ul className="space-y-4">
-                      {projects.map((project, index) => (
+                      {projects.map((project) => (
                          <li key={project.name} className="border-b border-border last:border-none">
-                          <ProjectsTrigger>
+                          <ProjectsTrigger project={project}>
                             <div className="flex justify-between items-center py-4 group w-full cursor-pointer">
                               <span className="font-headline text-2xl">{project.name}</span>
                               <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-foreground transition-colors" />
