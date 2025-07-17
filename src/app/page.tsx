@@ -21,29 +21,22 @@ const CodeIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 const techIcons = [
   {
-    name: 'React',
-    icon: (
-      <svg role="img" viewBox="0 0 113.39 101.68" className="h-10 w-10 text-primary">
-        <title>React</title>
-        <g fill="currentColor">
-          <ellipse stroke="currentColor" strokeWidth="4" ry="45.34" rx="10.82" cy="50.84" cx="56.69" transform="rotate(60 56.69 50.84)"></ellipse>
-          <ellipse stroke="currentColor" strokeWidth="4" ry="45.34" rx="10.82" cy="50.84" cx="56.69" transform="rotate(120 56.69 50.84)"></ellipse>
-          <ellipse stroke="currentColor" strokeWidth="4" ry="45.34" rx="10.82" cy="50.84" cx="56.69"></ellipse>
-          <circle fill="#000" r="10.27" cy="50.84" cx="56.69"></circle>
-        </g>
-      </svg>
-    ),
-    delay: 'animation-delay-0'
-  },
-  {
-    name: 'Next.js',
+    name: 'Java',
     icon: (
       <svg role="img" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
-        <title>Next.js</title>
-        <path d="M13.792 2.304a2.25 2.25 0 0 0-3.584 0L1.76 17.518a2.25 2.25 0 0 0 1.792 3.545h8.483c.35 0 .688-.173.896-.464l7.103-10.022a2.25 2.25 0 0 0-1.792-3.545H10.15l3.642-5.728ZM8.415 12.75h4.928l-2.464 3.75h-4.93l2.466-3.75Z"></path>
+        <title>Java</title>
+        <path d="M12.44 6.33a.47.47 0 00-.43.24L9.2 12.3v.05l-1.3 5.4a.1.1 0 00.1.1h1.33a.47.47 0 00.44-.28l2.2-4.57v.01l1.45-3a.47.47 0 00-.43-.68zm4.18-1.04a.47.47 0 00-.43.27l-2.9 6.02-.37.74.83 3.65a.48.48 0 00.47.39H16a.48.48 0 00.47-.39L18.43 9a.48.48 0 00-.47-.56h-1.3zm-8.86 0a.48.48 0 00-.47.56L9.2 9.2a.48.48 0 00.47.56h1.3a.48.48 0 00.44-.3l-1.12-2.3a.48.48 0 00-.4-.26zm5.83 9.42a.48.48 0 00-.44.27l-1.12 2.3a.48.48 0 00.4.73h1.3a.48.48 0 00.48-.55l-.1-3.23a.48.48 0 00-.52-.52z" />
       </svg>
     ),
-    delay: 'animation-delay-200'
+  },
+  {
+    name: 'Flutter',
+    icon: (
+      <svg role="img" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+        <title>Flutter</title>
+        <path d="M13.5 7.5l-4 4 4 4 8-8-8-8zm-4 4l-4 4h8l-4-4z"/>
+      </svg>
+    ),
   },
   {
     name: 'Node.js',
@@ -53,18 +46,16 @@ const techIcons = [
         <path d="M11.72 17.75c-.23.4-.64.65-1.1.65H8.28c-.69 0-1.25-.56-1.25-1.25V7.75c0-.69.56-1.25 1.25-1.25h2.2c.54 0 1.01.32 1.2.78l3.12 7.51c.21.5.03 1.08-.43 1.34l-1.07.59c-.46.26-1.04.14-1.35-.27L11.72 17.75zM19.11 6.5h-2.2c-.69 0-1.25.56-1.25 1.25v8.41c0 .69.56 1.25 1.25 1.25h2.2c.69 0 1.25-.56 1.25-1.25V7.75c0-.69-.56-1.25-1.25-1.25z"></path>
       </svg>
     ),
-    delay: 'animation-delay-400'
   },
   {
-    name: 'Firebase',
+    name: 'GCP',
     icon: (
       <svg role="img" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
-        <title>Firebase</title>
-        <path d="M4.33 21.37l1.43-1.43L4.33 18.51l-1.43 1.43 1.43 1.43zM18.24 3.08l-9.1 5.25L12 11.25l7.1-4.1-1.12-6.52a.38.38 0 0 0-.24-.25l-2.5-.5zM3.4 17.07L12 4.69l-2.87-1.66L2.27 15.4l1.13 1.67zM18.8 19.9l-5.66-10.3-2.86-1.64-5.94 10.3 5.3 3.06 9.16-5.28.01.01 2.87 1.66-2.88 1.66z"></path>
+        <title>Google Cloud</title>
+        <path d="M12.12 11.232a3.812 3.812 0 110-7.624 3.812 3.812 0 010 7.624zm-1.89-1.92h1.89c.96 0 1.92.36 1.92 1.512a1.8 1.8 0 01-1.8 1.8h-.06c-.99.072-1.95-.36-1.95-1.512zM21.6 13.68a.9.9 0 00-.9.9v1.236a.9.9 0 101.8 0V14.58a.9.9 0 00-.9-.9zm-1.92-3.156c-1.368-1.584-3.132-2.016-4.932-2.016h-.06a6.34 6.34 0 00-6.048 4.212 6.34 6.34 0 00-2.88 5.148 6.336 6.336 0 006.336 6.336h7.668a5.202 5.202 0 005.184-5.22c0-2.808-2.304-5.04-5.268-5.064z"/>
       </svg>
     ),
-    delay: 'animation-delay-600'
-  },
+  }
 ];
 
 
@@ -79,6 +70,14 @@ const socialLinks = [
   { name: "GitHub", href: "https://github.com/rajat4722" },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/rajat-shukla586942/" },
 ];
+
+const skillCategories = {
+  Languages: ["Java", "Kotlin", "Dart", "HTML", "CSS", "JavaScript"],
+  Frameworks: ["Flutter", "Node.js", "React.js", "WordPress"],
+  "Data Management": ["MySQL", "MongoDB", "Firebase", "Firestore"],
+  Tools: ["Git", "GitHub", "Postman", "Jenkins", "Figma", "VS Code", "Jira"],
+  Cloud: ["GCP (Google Cloud Platform)"],
+};
 
 export default function Home() {
   return (
@@ -97,7 +96,7 @@ export default function Home() {
               </div>
               <div className="flex justify-around items-center pt-8">
                 {techIcons.map((tech, i) => (
-                  <div key={tech.name} className={`animate-float ${tech.delay}`} style={{animationDelay: `${i * 200}ms`}}>
+                  <div key={tech.name} className="animate-float" style={{animationDelay: `${i * 200}ms`}}>
                     {tech.icon}
                   </div>
                 ))}
@@ -136,42 +135,58 @@ export default function Home() {
                 </div>
             </div>
           </div>
-
-          <div className="md:col-span-3">
+          
+           <div className="md:col-span-3">
              <div className="bg-card p-8 rounded-3xl">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                   <ul className="space-y-4">
-                    {projects.map((project, index) => (
-                       <li key={project.name} className="border-b border-border last:border-none">
-                        <ProjectsTrigger>
-                          <div className="flex justify-between items-center py-4 group w-full cursor-pointer">
-                            <span className="font-headline text-2xl">{project.name}</span>
-                            <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-foreground transition-colors" />
-                          </div>
-                        </ProjectsTrigger>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="flex flex-col justify-between">
-                    <div className="rounded-3xl overflow-hidden aspect-video relative">
-                      <Image 
-                        src={projects[0].image}
-                        alt={projects[0].name}
-                        fill
-                        className="object-cover"
-                        data-ai-hint={projects[0].hint}
-                      />
-                    </div>
-                  <div className="flex items-center justify-end space-x-6 mt-4">
-                    {socialLinks.map(link => (
-                      <Button key={link.name} variant="link" asChild className="p-0 text-muted-foreground hover:text-foreground uppercase tracking-widest text-xs">
-                        <Link href={link.href} target="_blank">{link.name}</Link>
-                      </Button>
-                    ))}
+                  <div>
+                     <ul className="space-y-4">
+                      {projects.map((project, index) => (
+                         <li key={project.name} className="border-b border-border last:border-none">
+                          <ProjectsTrigger>
+                            <div className="flex justify-between items-center py-4 group w-full cursor-pointer">
+                              <span className="font-headline text-2xl">{project.name}</span>
+                              <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-foreground transition-colors" />
+                            </div>
+                          </ProjectsTrigger>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
+                  <div className="flex flex-col justify-between">
+                      <div className="rounded-3xl overflow-hidden aspect-video relative">
+                        <Image 
+                          src={projects[0].image}
+                          alt={projects[0].name}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={projects[0].hint}
+                        />
+                      </div>
+                    <div className="flex items-center justify-end space-x-6 mt-4">
+                      {socialLinks.map(link => (
+                        <Button key={link.name} variant="link" asChild className="p-0 text-muted-foreground hover:text-foreground uppercase tracking-widest text-xs">
+                          <Link href={link.href} target="_blank">{link.name}</Link>
+                        </Button>
+                      ))}
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:col-span-3">
+            <div className="bg-card p-8 rounded-3xl">
+              <h2 className="font-headline text-3xl font-bold mb-6">Skills & Technologies</h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                {Object.entries(skillCategories).map(([category, skills]) => (
+                  <div key={category}>
+                    <h3 className="font-headline text-lg font-bold mb-2">{category}</h3>
+                    <ul className="space-y-1 text-sm text-muted-foreground">
+                      {skills.map(skill => <li key={skill}>{skill}</li>)}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
