@@ -11,6 +11,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
 
 const ProjectsContent = () => (
   <>
@@ -20,18 +21,32 @@ const ProjectsContent = () => (
         Here are some of the projects I've worked on.
       </DialogDescription>
     </DialogHeader>
-    <div className="space-y-4">
+    <div className="space-y-6">
       <div>
         <h3 className="font-bold">Sales CRM (Web & Android App)</h3>
-        <p className="text-sm text-muted-foreground">A feature-rich CRM web dashboard and mobile app built with Flutter, providing a seamless user experience for managing customer relations.</p>
+        <p className="text-sm text-muted-foreground mt-2">
+          A comprehensive Sales CRM platform, available on both web and Android, designed to streamline sales workflows and enhance customer relationship management. This system provides a centralized hub for managing customer data, tracking agent productivity, and automating key sales tasks, leading to a more efficient sales process and measurable business growth.
+        </p>
+        <div className="mt-4">
+          <h4 className="text-sm font-semibold mb-2">Tech Stack:</h4>
+          <div className="flex flex-wrap gap-2">
+            <Badge variant="secondary">Flutter</Badge>
+            <Badge variant="secondary">Firestore</Badge>
+            <Badge variant="secondary">FCM</Badge>
+            <Badge variant="secondary">Node.js</Badge>
+            <Badge variant="secondary">SQL</Badge>
+            <Badge variant="secondary">GCP</Badge>
+            <Badge variant="secondary">REST APIs</Badge>
+          </div>
+        </div>
       </div>
       <div>
         <h3 className="font-bold">Fintech Mobile App</h3>
-        <p className="text-sm text-muted-foreground">A secure and intuitive fintech mobile app for managing personal finances, built with modern security practices.</p>
+        <p className="text-sm text-muted-foreground mt-2">A secure and intuitive fintech mobile app for managing personal finances, built with modern security practices.</p>
       </div>
       <div>
         <h3 className="font-bold">Portfolio Website</h3>
-        <p className="text-sm text-muted-foreground">This very website, built with Next.js and Tailwind CSS to showcase my work and skills.</p>
+        <p className="text-sm text-muted-foreground mt-2">This very website, built with Next.js and Tailwind CSS to showcase my work and skills.</p>
       </div>
     </div>
   </>
