@@ -79,8 +79,7 @@ const techIcons = [
 ];
 
 const projects = [
-  { name: 'CRM Web Dashboard', image: 'https://placehold.co/600x400.png', hint: 'crm dashboard' },
-  { name: 'CRM Mobile App', image: 'https://placehold.co/600x400.png', hint: 'mobile crm' },
+  { name: 'Sales CRM (Web & Android App)', image: 'https://placehold.co/600x400.png', hint: 'crm dashboard mobile' },
   { name: 'Fintech Mobile App', image: 'https://placehold.co/600x400.png', hint: 'finance mobile' },
   { name: 'Portfolio Website', image: 'https://placehold.co/600x400.png', hint: 'personal portfolio' },
 ];

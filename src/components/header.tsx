@@ -22,12 +22,8 @@ const ProjectsContent = () => (
     </DialogHeader>
     <div className="space-y-4">
       <div>
-        <h3 className="font-bold">CRM Web Dashboard</h3>
-        <p className="text-sm text-muted-foreground">A feature-rich CRM web dashboard built with Flutter, providing a seamless user experience for managing customer relations.</p>
-      </div>
-      <div>
-        <h3 className="font-bold">CRM Mobile App</h3>
-        <p className="text-sm text-muted-foreground">A cross-platform CRM mobile application, also built with Flutter, allowing for on-the-go access to the CRM system.</p>
+        <h3 className="font-bold">Sales CRM (Web & Android App)</h3>
+        <p className="text-sm text-muted-foreground">A feature-rich CRM web dashboard and mobile app built with Flutter, providing a seamless user experience for managing customer relations.</p>
       </div>
       <div>
         <h3 className="font-bold">Fintech Mobile App</h3>
