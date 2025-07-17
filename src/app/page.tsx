@@ -121,16 +121,6 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="bg-card p-8 rounded-3xl">
-              <h2 className="font-headline text-3xl font-bold mb-4">Interests</h2>
-              <div className="flex flex-wrap gap-2">
-                {interests.map((interest) => (
-                  <Badge key={interest} variant="secondary" className="bg-background hover:bg-background text-foreground font-normal text-sm py-1 px-3 rounded-full">
-                    {interest}
-                  </Badge>
-                ))}
-              </div>
-            </div>
           </div>
           
           <div className="md:col-span-2 space-y-6">
@@ -152,8 +142,15 @@ export default function Home() {
                   />
                 </div>
                 <div className="bg-primary hover:bg-accent transition-colors text-primary-foreground p-8 rounded-3xl flex flex-col justify-between group">
-                  <div>
-                    <p className="text-sm">Have a project in mind?</p>
+                  <div className="mb-8">
+                    <h3 className="font-headline text-2xl font-bold mb-4 text-primary-foreground/80">Interests</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {interests.map((interest) => (
+                        <Badge key={interest} variant="secondary" className="bg-accent hover:bg-accent text-accent-foreground font-normal text-sm py-1 px-3 rounded-full">
+                          {interest}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
                    <ContactTrigger>
                     <div className="flex justify-between items-end w-full cursor-pointer">
