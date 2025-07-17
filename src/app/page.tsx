@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { ProjectCarousel } from '@/components/project-carousel';
 
 const CodeIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -53,7 +54,7 @@ const techIcons = [
     icon: (
       <svg role="img" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
         <title>React</title>
-        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm-2.06-8.91c.21-.49.59-.88 1.06-1.06l3.3-1.1c.69-.23 1.4.28 1.4.99v.18c0 .41-.25.79-.64.95l-3.3 1.1c-.21.07-.43.07-.64 0l-3.3-1.1c-.69-.23-1.09-.96-.85-1.65s.96-1.09 1.65-.85l.02.01zm4.12 2.12c.21.49.12 1.08-.22 1.48l-1.65 1.95c-.38.45-1.03.56-1.54.25l-1.65-.98c-.51-.3-.79-.88-.64-1.45l.49-1.95c.15-.57.71-1.01 1.32-.95l.03.01c.6.06 1.08.51 1.18 1.1l.04.16zm-4.12 2.12c-.21-.49-.59-.88-1.06-1.06l-3.3-1.1c-.69-.23-1.4.28-1.4.99v.18c0 .41.25.79.64.95l3.3 1.1c.21.07.43.07.64 0l3.3-1.1c.69-.23 1.09-.96.85-1.65s-.96-1.09-1.65-.85l-.02.01z" />
+        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm-2.06-8.91c.21-.49.59-.88 1.06-1.06l3.3-1.1c.69-.23 1.4.28 1.4.99v.18c0 .41-.25.79-.64.95l-3.3 1.1c-.21.07-.43.07-.64 0l-3.3-1.1c-.69-.23-1.09-.96-.85-1.65s.96-1.09 1.65-.85l.02.01zm4.12 2.12c.21.49.12 1.08-.22 1.48l-1.65 1.95c-.38.45-1.03.56-1.54.25l-1.65-.98c-.51-.3-.79-.88-.64-1.45l.49-1.95c.15-.57.71-1.01 1.32-.95l.03.01c.6.06 1.08.51 1.18 1.1l.04.16zm-4.12 2.12c-.21-.49-.59-.88-1.06-1.06l-3.3-1.1c-.69-.23-1.4.28-1.4.99v.18c0 .41-.25.79.64.95l3.3 1.1c.21.07.43.07.64 0l3.3-1.1c.69-.23 1.09-.96.85-1.65s-.96-1.09-1.65-.85l-.02.01z" />
       </svg>
     )
   },
@@ -180,15 +181,7 @@ export default function Home() {
                     </ul>
                   </div>
                   <div className="flex flex-col justify-between">
-                      <div className="rounded-3xl overflow-hidden aspect-video relative">
-                        <Image 
-                          src={projects[0].image}
-                          alt={projects[0].name}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={projects[0].hint}
-                        />
-                      </div>
+                     <ProjectCarousel projects={projects} />
                     <div className="flex items-center justify-end space-x-6 mt-4">
                       {socialLinks.map(link => (
                         <Button key={link.name} variant="link" asChild className="p-0 text-muted-foreground hover:text-foreground uppercase tracking-widest text-xs">
