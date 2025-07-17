@@ -1,28 +1,34 @@
-import Header from '@/components/header';
+import { Header, ProjectsTrigger, ContactTrigger } from '@/components/header';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight, Github, Twitter, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const FlowerIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path d="M50 0C50 0 50 50 25 50C0 50 0 100 0 100C0 100 50 100 50 75C50 50 50 50 50 50Z" stroke="currentColor" strokeWidth="2"/>
-    <path d="M100 50C100 50 50 50 50 25C50 0 0 0 0 0C0 0 0 50 25 50C50 50 50 50 50 50Z" stroke="currentColor" strokeWidth="2"/>
-    <path d="M50 100C50 100 50 50 75 50C100 50 100 0 100 0C100 0 50 0 50 25C50 50 50 50 50 50Z" stroke="currentColor" strokeWidth="2"/>
-    <path d="M0 50C0 50 50 50 50 75C50 100 100 100 100 100C100 100 100 50 75 50C50 50 50 50 50 50Z" stroke="currentColor" strokeWidth="2"/>
-    <path d="M35.5 35.5C35.5 35.5 50 25 64.5 35.5C79 46 79 64.5 64.5 64.5C50 64.5 35.5 79 35.5 64.5C35.5 50 21 50 35.5 35.5Z" stroke="currentColor" strokeWidth="2"/>
+const CodeIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <polyline points="16 18 22 12 16 6" />
+    <polyline points="8 6 2 12 8 18" />
   </svg>
-)
+);
+
 
 const projects = [
-  { name: 'Musea', image: 'https://placehold.co/600x400.png', hint: 'pink chair' },
-  { name: 'Elara' },
-  { name: 'Verve' },
-  { name: 'Zephyr' },
+  { name: 'E-Commerce Platform', image: 'https://placehold.co/600x400.png', hint: 'online shopping' },
+  { name: 'Task Management App', image: 'https://placehold.co/600x400.png', hint: 'mobile application' },
+  { name: 'Portfolio Website', image: 'https://placehold.co/600x400.png', hint: 'personal portfolio' },
+  { name: 'Social Media Dashboard', image: 'https://placehold.co/600x400.png', hint: 'analytics dashboard' },
 ];
 
 const socialLinks = [
-  { name: "Instagram", href: "#", icon: null },
+  { name: "GitHub", href: "#", icon: Github },
   { name: "Twitter", href: "#", icon: Twitter },
   { name: "LinkedIn", href: "#", icon: Linkedin },
 ];
@@ -36,40 +42,42 @@ export default function Home() {
           
           <div className="md:col-span-1 space-y-6">
             <div className="bg-card p-8 rounded-3xl h-full flex flex-col justify-between">
-              <FlowerIcon className="w-10 h-10 text-primary self-start opacity-50" />
+              <CodeIcon className="w-10 h-10 text-primary self-start opacity-50" />
               <p className="text-sm/relaxed">
-                Julia Huang is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.
+                Hi, I'm John Doe. A passionate developer based in San Francisco, creating beautiful and functional web and mobile applications that solve real-world problems.
               </p>
             </div>
           </div>
           
           <div className="md:col-span-2 space-y-6">
             <div className="bg-card p-8 rounded-3xl relative">
-              <FlowerIcon className="w-16 h-16 text-primary absolute top-8 right-8 opacity-30" />
-              <h1 className="font-headline text-5xl md:text-6xl font-bold max-w-md">
-                Artist Redefining Architecture with AI-Driven Design
+              <CodeIcon className="w-16 h-16 text-primary absolute top-8 right-8 opacity-30" />
+              <h1 className="font-headline text-5xl md:text-6xl font-bold max-w-xl">
+                Web & Mobile Developer Crafting Digital Experiences
               </h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-card rounded-3xl overflow-hidden aspect-[4/3]">
                   <Image
                     src="https://placehold.co/600x800.png"
-                    alt="Julia Huang"
+                    alt="John Doe"
                     width={600}
                     height={800}
                     className="w-full h-full object-cover"
-                    data-ai-hint="pink hair"
+                    data-ai-hint="man developer"
                   />
                 </div>
-                <Link href="#contact" className="bg-primary hover:bg-accent transition-colors text-primary-foreground p-8 rounded-3xl flex flex-col justify-between group">
+                <div className="bg-primary hover:bg-accent transition-colors text-primary-foreground p-8 rounded-3xl flex flex-col justify-between group">
                   <div>
-                    <p className="text-sm">Have some questions?</p>
+                    <p className="text-sm">Have a project in mind?</p>
                   </div>
-                  <div className="flex justify-between items-end">
-                    <h2 className="font-headline text-4xl font-bold">Contact me</h2>
-                    <ArrowUpRight className="w-8 h-8 transform group-hover:rotate-45 transition-transform" />
-                  </div>
-                </Link>
+                   <ContactTrigger>
+                    <div className="flex justify-between items-end w-full cursor-pointer">
+                      <h2 className="font-headline text-4xl font-bold">Contact me</h2>
+                      <ArrowUpRight className="w-8 h-8 transform group-hover:rotate-45 transition-transform" />
+                    </div>
+                  </ContactTrigger>
+                </div>
             </div>
           </div>
 
@@ -79,11 +87,13 @@ export default function Home() {
                 <div>
                    <ul className="space-y-4">
                     {projects.map((project, index) => (
-                      <li key={project.name} className="border-b border-border last:border-none">
-                        <Link href="#" className="flex justify-between items-center py-4 group">
-                          <span className="font-headline text-2xl">{project.name}</span>
-                          <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-foreground transition-colors" />
-                        </Link>
+                       <li key={project.name} className="border-b border-border last:border-none">
+                        <ProjectsTrigger>
+                          <div className="flex justify-between items-center py-4 group w-full cursor-pointer">
+                            <span className="font-headline text-2xl">{project.name}</span>
+                            <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-foreground transition-colors" />
+                          </div>
+                        </ProjectsTrigger>
                       </li>
                     ))}
                   </ul>
