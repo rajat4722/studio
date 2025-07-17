@@ -61,7 +61,7 @@ const ContactContent = () => (
     <DialogHeader>
       <DialogTitle>Contact Me</DialogTitle>
       <DialogDescription>
-        Feel free to reach out for collaborations or just to say hi!
+        Let's chat! I'm ready to work on exciting projects.
       </DialogDescription>
     </DialogHeader>
     <div className="space-y-4">
