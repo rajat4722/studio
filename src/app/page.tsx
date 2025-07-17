@@ -1,7 +1,7 @@
 import { Header, ProjectsTrigger, ContactTrigger } from '@/components/header';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowUpRight, Github, Linkedin } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const CodeIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -28,8 +28,8 @@ const projects = [
 ];
 
 const socialLinks = [
-  { name: "GitHub", href: "https://github.com/rajat4722", icon: Github },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/rajat-shukla586942/", icon: Linkedin },
+  { name: "GitHub", href: "https://github.com/rajat4722" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/rajat-shukla586942/" },
 ];
 
 export default function Home() {
@@ -43,7 +43,7 @@ export default function Home() {
             <div className="bg-card p-8 rounded-3xl h-full flex flex-col justify-between">
               <CodeIcon className="w-10 h-10 text-primary self-start opacity-50" />
               <p className="text-sm/relaxed">
-                Hi, I'm John Doe. A passionate developer based in San Francisco, creating beautiful and functional web and mobile applications that solve real-world problems.
+                Hi, I'm RAJAT SHUKLA. A passionate developer based in San Francisco, creating beautiful and functional web and mobile applications that solve real-world problems.
               </p>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function Home() {
                 <div className="bg-card rounded-3xl overflow-hidden aspect-[4/3]">
                   <Image
                     src="https://placehold.co/600x800.png"
-                    alt="John Doe"
+                    alt="RAJAT SHUKLA"
                     width={600}
                     height={800}
                     className="w-full h-full object-cover"

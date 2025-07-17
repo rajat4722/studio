@@ -86,7 +86,7 @@ export function Header() {
   return (
     <header className="container mx-auto flex h-24 items-center justify-between px-4 md:px-8">
       <Link href="/" className="font-headline text-lg font-bold uppercase tracking-widest">
-        John Doe
+        RAJAT SHUKLA
       </Link>
       <nav className="flex items-center gap-2 md:gap-4">
         {navLinks.map((link) => (
@@ -123,5 +123,3 @@ export const ContactTrigger = ({ children }: { children: React.ReactNode }) => (
     <DialogContent><ContactContent /></DialogContent>
   </Dialog>
 );
-
-export default Header;

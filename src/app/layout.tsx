@@ -4,8 +4,8 @@ import { Toaster } from '@/components/ui/toaster';
 import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
-  title: 'John Doe | Web & Mobile Developer',
-  description: 'Portfolio of John Doe, a skilled web and mobile developer specializing in creating modern and responsive applications.',
+  title: 'RAJAT SHUKLA | Web & Mobile Developer',
+  description: 'Portfolio of RAJAT SHUKLA, a skilled web and mobile developer specializing in creating modern and responsive applications.',
 };
 
 export default function RootLayout({
