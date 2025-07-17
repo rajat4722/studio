@@ -47,6 +47,15 @@ const techIcons = [
       </svg>
     ),
   },
+   {
+    name: 'React',
+    icon: (
+      <svg role="img" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+        <title>React</title>
+        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm-2.06-8.91c.21-.49.59-.88 1.06-1.06l3.3-1.1c.69-.23 1.4.28 1.4.99v.18c0 .41-.25.79-.64.95l-3.3 1.1c-.21.07-.43.07-.64 0l-3.3-1.1c-.69-.23-1.09-.96-.85-1.65s.96-1.09 1.65-.85l.02.01zm4.12 2.12c.21.49.12 1.08-.22 1.48l-1.65 1.95c-.38.45-1.03.56-1.54.25l-1.65-.98c-.51-.3-.79-.88-.64-1.45l.49-1.95c.15-.57.71-1.01 1.32-.95l.03.01c.6.06 1.08.51 1.18 1.1l.04.16zm-4.12 2.12c-.21-.49-.59-.88-1.06-1.06l-3.3-1.1c-.69-.23-1.4.28-1.4.99v.18c0 .41.25.79.64.95l3.3 1.1c.21.07.43.07.64 0l3.3-1.1c.69-.23 1.09-.96.85-1.65s-.96-1.09-1.65-.85l-.02.01z" />
+      </svg>
+    )
+  },
   {
     name: 'GCP',
     icon: (
@@ -55,7 +64,16 @@ const techIcons = [
         <path d="M12.12 11.232a3.812 3.812 0 110-7.624 3.812 3.812 0 010 7.624zm-1.89-1.92h1.89c.96 0 1.92.36 1.92 1.512a1.8 1.8 0 01-1.8 1.8h-.06c-.99.072-1.95-.36-1.95-1.512zM21.6 13.68a.9.9 0 00-.9.9v1.236a.9.9 0 101.8 0V14.58a.9.9 0 00-.9-.9zm-1.92-3.156c-1.368-1.584-3.132-2.016-4.932-2.016h-.06a6.34 6.34 0 00-6.048 4.212 6.34 6.34 0 00-2.88 5.148 6.336 6.336 0 006.336 6.336h7.668a5.202 5.202 0 005.184-5.22c0-2.808-2.304-5.04-5.268-5.064z"/>
       </svg>
     ),
-  }
+  },
+   {
+    name: 'Firebase',
+    icon: (
+      <svg role="img" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+        <title>Firebase</title>
+        <path d="M4.58 16.52l6.19-11.23a.47.47 0 01.81 0l6.19 11.23a.47.47 0 01-.4.7H4.98a.47.47 0 01-.4-.7zM6.54 4.3l-2.1 11.75a.47.47 0 00.44.55h.3a.47.47 0 00.46-.38L8.1 4.25a.47.47 0 00-.4-.53h-.7a.47.47 0 00-.46.58z" />
+      </svg>
+    )
+  },
 ];
 
 
@@ -71,14 +89,6 @@ const socialLinks = [
   { name: "LinkedIn", href: "https://www.linkedin.com/in/rajat-shukla586942/" },
 ];
 
-const skillCategories = {
-  Languages: ["Java", "Kotlin", "Dart", "HTML", "CSS", "JavaScript"],
-  Frameworks: ["Flutter", "Node.js", "React.js", "WordPress"],
-  "Data Management": ["MySQL", "MongoDB", "Firebase", "Firestore"],
-  Tools: ["Git", "GitHub", "Postman", "Jenkins", "Figma", "VS Code", "Jira"],
-  Cloud: ["GCP (Google Cloud Platform)"],
-};
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground font-body">
@@ -91,12 +101,12 @@ export default function Home() {
               <div>
                 <h2 className="font-headline text-3xl font-bold">Expertise</h2>
                  <p className="text-sm/relaxed text-muted-foreground mt-2">
-                  I build modern, responsive, and scalable applications for web and mobile, tailored to your needs.
+                  I build modern, responsive, and scalable applications for web and mobile, using a diverse tech stack.
                 </p>
               </div>
-              <div className="flex justify-around items-center pt-8">
+              <div className="flex flex-wrap justify-center items-center gap-6 pt-8">
                 {techIcons.map((tech, i) => (
-                  <div key={tech.name} className="animate-float" style={{animationDelay: `${i * 200}ms`}}>
+                  <div key={tech.name} className="animate-float" style={{animationDelay: `${i * 150}ms`}}>
                     {tech.icon}
                   </div>
                 ))}
@@ -175,21 +185,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="md:col-span-3">
-            <div className="bg-card p-8 rounded-3xl">
-              <h2 className="font-headline text-3xl font-bold mb-6">Skills & Technologies</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-                {Object.entries(skillCategories).map(([category, skills]) => (
-                  <div key={category}>
-                    <h3 className="font-headline text-lg font-bold mb-2">{category}</h3>
-                    <ul className="space-y-1 text-sm text-muted-foreground">
-                      {skills.map(skill => <li key={skill}>{skill}</li>)}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </main>
     </div>
