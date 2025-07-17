@@ -144,7 +144,7 @@ export default function Home() {
                 </div>
                 <div className="bg-primary hover:bg-accent transition-colors text-primary-foreground p-8 rounded-3xl flex flex-col justify-between group">
                   <div className="mb-8">
-                    <h3 className="font-headline text-2xl font-bold mb-4">Have a project in mind?</h3>
+                    <h3 className="font-headline text-xl font-bold mb-4">Have a project in mind?</h3>
                     <div className="flex flex-wrap gap-2">
                       {interests.map((interest) => (
                         <Badge key={interest} variant="secondary" className="bg-accent hover:bg-accent text-accent-foreground font-normal text-sm py-1 px-3 rounded-full">
