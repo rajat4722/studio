@@ -78,10 +78,10 @@ const techIcons = [
 ];
 
 const projects = [
-  { name: 'E-Commerce Platform', image: 'https://placehold.co/600x400.png', hint: 'online shopping' },
-  { name: 'Task Management App', image: 'https://placehold.co/600x400.png', hint: 'mobile application' },
+  { name: 'CRM Web Dashboard', image: 'https://placehold.co/600x400.png', hint: 'crm dashboard' },
+  { name: 'CRM Mobile App', image: 'https://placehold.co/600x400.png', hint: 'mobile crm' },
+  { name: 'Fintech Mobile App', image: 'https://placehold.co/600x400.png', hint: 'finance mobile' },
   { name: 'Portfolio Website', image: 'https://placehold.co/600x400.png', hint: 'personal portfolio' },
-  { name: 'Social Media Dashboard', image: 'https://placehold.co/600x400.png', hint: 'analytics dashboard' },
 ];
 
 const socialLinks = [
