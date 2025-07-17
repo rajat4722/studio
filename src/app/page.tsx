@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 
 const CodeIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -76,7 +77,6 @@ const techIcons = [
   },
 ];
 
-
 const projects = [
   { name: 'E-Commerce Platform', image: 'https://placehold.co/600x400.png', hint: 'online shopping' },
   { name: 'Task Management App', image: 'https://placehold.co/600x400.png', hint: 'mobile application' },
@@ -87,6 +87,15 @@ const projects = [
 const socialLinks = [
   { name: "GitHub", href: "https://github.com/rajat4722" },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/rajat-shukla586942/" },
+];
+
+const interests = [
+  "Mobile (Android)",
+  "Web Application",
+  "Logo",
+  "Poster Designing",
+  "Research",
+  "Photography",
 ];
 
 export default function Home() {
@@ -109,6 +118,16 @@ export default function Home() {
                   <div key={tech.name} className="animate-float" style={{animationDelay: `${i * 150}ms`}}>
                     {tech.icon}
                   </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-card p-8 rounded-3xl">
+              <h2 className="font-headline text-3xl font-bold mb-4">Interests</h2>
+              <div className="flex flex-wrap gap-2">
+                {interests.map((interest) => (
+                  <Badge key={interest} variant="secondary" className="bg-background hover:bg-background text-foreground font-normal text-sm py-1 px-3 rounded-full">
+                    {interest}
+                  </Badge>
                 ))}
               </div>
             </div>
