@@ -1,7 +1,7 @@
 import { Header, ProjectsTrigger, ContactTrigger } from '@/components/header';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowUpRight, Github, Twitter, Linkedin } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const CodeIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -28,9 +28,8 @@ const projects = [
 ];
 
 const socialLinks = [
-  { name: "GitHub", href: "#", icon: Github },
-  { name: "Twitter", href: "#", icon: Twitter },
-  { name: "LinkedIn", href: "#", icon: Linkedin },
+  { name: "GitHub", href: "https://github.com/rajat4722", icon: Github },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/rajat-shukla586942/", icon: Linkedin },
 ];
 
 export default function Home() {
@@ -111,7 +110,7 @@ export default function Home() {
                   <div className="flex items-center justify-end space-x-6 mt-4">
                     {socialLinks.map(link => (
                       <Button key={link.name} variant="link" asChild className="p-0 text-muted-foreground hover:text-foreground uppercase tracking-widest text-xs">
-                        <Link href={link.href}>{link.name}</Link>
+                        <Link href={link.href} target="_blank">{link.name}</Link>
                       </Button>
                     ))}
                   </div>

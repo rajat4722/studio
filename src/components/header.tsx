@@ -66,10 +66,10 @@ const ContactContent = () => (
     </DialogHeader>
     <div className="space-y-4">
       <p className="text-sm">
-        You can reach me via email at <a href="mailto:hello@johndoe.com" className="text-primary hover:underline">hello@johndoe.com</a>.
+        You can reach me via email at <a href="mailto:rajatshukla3338@gmail.com" className="text-primary hover:underline">rajatshukla3338@gmail.com</a>.
       </p>
       <p className="text-sm">
-        You can also find me on LinkedIn, GitHub, and Twitter.
+        You can also find me on <a href="https://www.linkedin.com/in/rajat-shukla586942/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">LinkedIn</a> and <a href="https://github.com/rajat4722" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub</a>.
       </p>
     </div>
   </>
