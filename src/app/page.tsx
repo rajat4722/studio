@@ -151,7 +151,7 @@ export default function Home() {
           
           <div className="md:col-span-2 space-y-6">
             <div className="bg-card p-8 rounded-3xl">
-              <h1 className="font-headline text-5xl md:text-6xl font-bold">
+              <h1 className="font-headline text-4xl md:text-5xl font-bold">
                 <span className="block">Web & Mobile Developer</span>
                 <span className="block text-primary">Crafting Digital Experiences</span>
               </h1>
