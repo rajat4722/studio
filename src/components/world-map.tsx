@@ -1,7 +1,6 @@
 import React from 'react';
 
 const dots = [
-  { cx: 20, cy: 40, key: 'na' }, // North America
   { cx: 45, cy: 35, key: 'eu' }, // Europe
   { cx: 65, cy: 45, key: 'as' }, // Asia
   { cx: 25, cy: 65, key: 'sa' }, // South America
@@ -33,6 +32,29 @@ const WorldMap = () => {
             style={{ animationDelay: `${i * 300}ms` }}
           />
         ))}
+        <g className="animate-pulse-glow" style={{ animationDelay: '1s' }}>
+          <circle
+            cx="20"
+            cy="40"
+            r="4"
+            className="fill-primary/30 stroke-primary"
+            strokeWidth="0.5"
+          />
+          <circle
+            cx="20"
+            cy="40"
+            r="1.5"
+            className="fill-primary"
+          />
+          <text
+            x="20"
+            y="35"
+            className="text-[4px] font-sans fill-foreground text-anchor-middle"
+            textAnchor="middle"
+          >
+            You are here
+          </text>
+        </g>
       </svg>
     </div>
   );
