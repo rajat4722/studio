@@ -75,13 +75,13 @@ export function CustomCursor() {
     };
   }, []);
 
-  const startHue = 240; // Blue
+  const startHue = 220; // Electric Blue
   const startSat = 100;
-  const startLight = 70;
+  const startLight = 60;
   
-  const endHue = 280; // Purple
+  const endHue = 270; // Neon Purple
   const endSat = 100;
-  const endLight = 60;
+  const endLight = 65;
   
   return (
     <>
