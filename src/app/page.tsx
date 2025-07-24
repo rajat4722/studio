@@ -172,13 +172,13 @@ export default function Home() {
               </h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-card rounded-3xl overflow-hidden aspect-[4/3]">
+                <div className="bg-card rounded-3xl overflow-hidden aspect-[4/3] group">
                   <Image
                     src="https://placehold.co/600x800.png"
                     alt="RAJAT SHUKLA"
                     width={600}
                     height={800}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                     data-ai-hint="man developer"
                   />
                 </div>
@@ -240,3 +240,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
