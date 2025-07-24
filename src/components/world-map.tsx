@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '@/lib/utils';
 
 const dots = [
   { cx: 45, cy: 35, key: 'eu' }, // Europe
@@ -32,28 +33,20 @@ const WorldMap = () => {
             style={{ animationDelay: `${i * 300}ms` }}
           />
         ))}
-        <g className="animate-pulse-glow" style={{ animationDelay: '1s' }}>
+         <g className="animate-pulse-glow" style={{ animationDelay: '1s' }}>
           <circle
             cx="20"
             cy="40"
             r="4"
-            className="fill-primary/30 stroke-primary"
+            className="fill-accent/30 stroke-accent"
             strokeWidth="0.5"
           />
           <circle
             cx="20"
             cy="40"
             r="1.5"
-            className="fill-primary"
+            className="fill-accent"
           />
-          <text
-            x="20"
-            y="35"
-            className="text-[4px] font-sans fill-foreground text-anchor-middle"
-            textAnchor="middle"
-          >
-            You are here
-          </text>
         </g>
       </svg>
     </div>
