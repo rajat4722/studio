@@ -75,14 +75,13 @@ export function CustomCursor() {
     };
   }, []);
 
-  // Primary: 142 93% 48% -> Accent: 142 93% 38%
-  const startHue = 142;
-  const startSat = 93;
-  const startLight = 48;
+  const startHue = 240; // Blue
+  const startSat = 100;
+  const startLight = 70;
   
-  const endHue = 142; // accent hue
-  const endSat = 93; // accent sat
-  const endLight = 38; // accent light
+  const endHue = 280; // Purple
+  const endSat = 100;
+  const endLight = 60;
   
   return (
     <>
