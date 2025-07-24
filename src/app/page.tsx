@@ -150,10 +150,10 @@ export default function Home() {
           </div>
           
           <div className="md:col-span-2 space-y-6">
-            <div className="bg-card p-8 rounded-3xl relative">
-              <CodeIcon className="w-16 h-16 text-primary absolute top-8 right-8 opacity-30" />
-              <h1 className="font-headline text-5xl md:text-6xl font-bold max-w-xl">
-                Web & Mobile Developer Crafting Digital Experiences
+            <div className="bg-card p-8 rounded-3xl">
+              <h1 className="font-headline text-5xl md:text-6xl font-bold">
+                <span className="block">Web & Mobile Developer</span>
+                <span className="block text-primary">Crafting Digital Experiences</span>
               </h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
