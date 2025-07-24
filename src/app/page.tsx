@@ -5,6 +5,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ProjectCarousel } from '@/components/project-carousel';
+import { TypewriterEffect } from '@/components/typewriter-effect';
 import type { Project } from '@/components/header';
 
 const CodeIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -124,6 +125,8 @@ const interests = [
   "Photography",
 ];
 
+const bioText = "I build modern, responsive, and scalable applications for both web and mobile platforms. My focus is on creating seamless user experiences powered by a diverse and robust tech stack. From crafting intuitive mobile apps with Flutter to developing powerful back-ends with Node.js, I bring a well-rounded skill set to every project.";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground font-body">
@@ -134,9 +137,7 @@ export default function Home() {
           <div className="md:col-span-1 space-y-6">
             <div className="bg-card p-8 rounded-3xl h-full flex flex-col justify-between animated-gradient text-card-foreground">
               <div>
-                 <p className="text-sm/relaxed">
-                  I build modern, responsive, and scalable applications for both web and mobile platforms. My focus is on creating seamless user experiences powered by a diverse and robust tech stack. From crafting intuitive mobile apps with Flutter to developing powerful back-ends with Node.js, I bring a well-rounded skill set to every project.
-                </p>
+                <TypewriterEffect text={bioText} className="text-sm/relaxed" />
               </div>
               <div className="flex flex-wrap justify-start items-center gap-6 pt-8">
                 {techIcons.map((tech, i) => (
