@@ -167,7 +167,7 @@ export default function Home() {
                     data-ai-hint="man developer"
                   />
                 </div>
-                <div className="bg-primary hover:bg-accent transition-colors text-primary-foreground p-8 rounded-3xl flex flex-col justify-between group">
+                <div className="bg-card p-8 rounded-3xl flex flex-col justify-between group">
                   <div className="mb-8">
                     <h3 className="font-headline text-xl font-bold mb-4">Have a project in mind?</h3>
                     <div className="flex flex-wrap gap-2">
