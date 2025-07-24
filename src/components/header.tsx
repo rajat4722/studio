@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -12,6 +13,8 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
+import Image from "next/image";
+import { ScrollArea } from "./ui/scroll-area";
 
 export interface Project {
   name: string;
@@ -22,31 +25,44 @@ export interface Project {
 }
 
 const ProjectContent = ({ project }: { project: Project }) => (
-  <>
-    <DialogHeader>
-      <DialogTitle>{project.name}</DialogTitle>
+  <div className="grid grid-rows-[auto_1fr] gap-4 h-full max-h-[80vh] md:max-h-[70vh]">
+    <DialogHeader className="pr-8">
+      <DialogTitle className="text-2xl font-headline">{project.name}</DialogTitle>
       <DialogDescription>
-        Here are the details for this project.
+        Project Details
       </DialogDescription>
     </DialogHeader>
-    <div className="space-y-6">
-      <div>
-        <p className="text-sm text-muted-foreground mt-2">
-          {project.description}
-        </p>
+    <ScrollArea className="w-full">
+      <div className="space-y-6 pr-6">
+        <div className="rounded-2xl overflow-hidden aspect-video relative">
+          <Image
+            src={project.image}
+            alt={project.name}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+            data-ai-hint={project.hint}
+          />
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold mb-2 font-headline">About this project</h3>
+          <p className="text-sm text-muted-foreground">
+            {project.description}
+          </p>
+        </div>
         {project.techStack && project.techStack.length > 0 && (
-          <div className="mt-4">
-            <h4 className="text-sm font-semibold mb-2">Tech Stack:</h4>
+          <div>
+            <h3 className="text-lg font-semibold mb-2 font-headline">Tech Stack</h3>
             <div className="flex flex-wrap gap-2">
               {project.techStack.map((tech) => (
-                <Badge key={tech} variant="secondary">{tech}</Badge>
+                <Badge key={tech} variant="secondary" className="font-normal">{tech}</Badge>
               ))}
             </div>
           </div>
         )}
       </div>
-    </div>
-  </>
+    </ScrollArea>
+  </div>
 );
 
 
@@ -125,7 +141,7 @@ export function Header() {
 export const ProjectsTrigger = ({ children, project }: { children: React.ReactNode, project: Project }) => (
   <Dialog>
     <DialogTrigger asChild>{children}</DialogTrigger>
-    <DialogContent><ProjectContent project={project} /></DialogContent>
+    <DialogContent className="max-w-2xl"><ProjectContent project={project} /></DialogContent>
   </Dialog>
 );
 
