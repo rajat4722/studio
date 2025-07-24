@@ -100,10 +100,10 @@ const projects: Project[] = [
     techStack: ["Flutter", "Firebase", "Node.js"]
   },
   { 
-    name: 'Portfolio Website', 
+    name: 'Home Service Platforms', 
     image: 'https://storage.googleapis.com/aai-web-samples/user-provided/600x400-b4.png', 
-    hint: 'personal portfolio',
-    description: "This very website, built with Next.js and Tailwind CSS to showcase my work and skills.",
+    hint: 'home service mobile',
+    description: "platform enables consumers to easily order services, including cleaning, pest control, plumbing, carpentry, appliance servicing and repair, painting, skincare, hair grooming and massage therapy. These services are delivered by trained and independent service professionals at the consumers’ convenience.",
     techStack: ["Next.js", "React", "Tailwind CSS", "ShadCN UI", "TypeScript"]
   },
   {
@@ -234,5 +234,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
