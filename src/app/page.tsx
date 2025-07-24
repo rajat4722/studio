@@ -137,7 +137,7 @@ export default function Home() {
           <div className="md:col-span-1 space-y-6">
             <div className="bg-card p-8 rounded-3xl h-full flex flex-col justify-between animated-gradient text-card-foreground">
               <div>
-                <TypewriterEffect text={bioText} className="text-sm/relaxed" />
+                <p className="text-sm/relaxed">{bioText}</p>
               </div>
               <div className="flex flex-wrap justify-start items-center gap-6 pt-8">
                 {techIcons.map((tech, i) => (
