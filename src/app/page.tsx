@@ -101,6 +101,13 @@ const projects: Project[] = [
     description: "This very website, built with Next.js and Tailwind CSS to showcase my work and skills.",
     techStack: ["Next.js", "React", "Tailwind CSS", "ShadCN UI", "TypeScript"]
   },
+  {
+    name: "Project Toolkit",
+    image: "https://storage.googleapis.com/aai-web-samples/user-provided/600x400-b3.png",
+    hint: "developer tools",
+    description: "A comprehensive toolkit designed to streamline project management and development workflows. It includes features for task tracking, code collaboration, and automated deployments, all integrated into a single, user-friendly interface.",
+    techStack: ["React", "Node.js", "GraphQL", "Docker", "Kubernetes"],
+  },
 ];
 
 const socialLinks = [
@@ -125,7 +132,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           <div className="md:col-span-1 space-y-6">
-            <div className="bg-card p-8 rounded-3xl h-full flex flex-col justify-between">
+            <div className="bg-card p-8 rounded-3xl h-full flex flex-col justify-between animated-gradient">
               <div>
                 <h2 className="font-headline text-3xl font-bold">Expertise</h2>
                  <p className="text-sm/relaxed text-muted-foreground mt-2">
