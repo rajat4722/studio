@@ -133,9 +133,8 @@ export default function Home() {
           
           <div className="md:col-span-1 space-y-6">
             <div className="bg-card p-8 rounded-3xl h-full flex flex-col justify-between animated-gradient text-card-foreground">
-              <div className="flex-1 flex flex-col justify-center">
-                <h2 className="font-headline text-3xl font-bold">Expertise</h2>
-                 <p className="text-sm/relaxed mt-2">
+              <div>
+                 <p className="text-sm/relaxed">
                   I build modern, responsive, and scalable applications for both web and mobile platforms. My focus is on creating seamless user experiences powered by a diverse and robust tech stack. From crafting intuitive mobile apps with Flutter to developing powerful back-ends with Node.js, I bring a well-rounded skill set to every project.
                 </p>
               </div>
