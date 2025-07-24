@@ -88,10 +88,10 @@
   .animated-gradient {
     background-size: 200% 200%;
     background-image: linear-gradient(
-      -45deg, 
-      hsl(var(--card)) 0%, 
-      hsl(var(--secondary)) 50%,
-      hsl(var(--card)) 100%
+      -45deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--accent)) 50%,
+      hsl(var(--secondary)) 100%
     );
     animation: animated-gradient 10s ease infinite;
   }

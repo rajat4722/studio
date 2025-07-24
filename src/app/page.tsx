@@ -132,10 +132,10 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           <div className="md:col-span-1 space-y-6">
-            <div className="bg-card p-8 rounded-3xl h-full flex flex-col justify-between animated-gradient">
-              <div>
+            <div className="bg-card p-8 rounded-3xl h-full flex flex-col justify-between animated-gradient text-card-foreground">
+              <div className="flex-1 flex flex-col justify-center text-center">
                 <h2 className="font-headline text-3xl font-bold">Expertise</h2>
-                 <p className="text-sm/relaxed text-muted-foreground mt-2">
+                 <p className="text-sm/relaxed mt-2">
                   I build modern, responsive, and scalable applications for web and mobile, using a diverse tech stack.
                 </p>
               </div>
