@@ -100,10 +100,10 @@ const projects: Project[] = [
     techStack: ["Flutter", "Firebase", "Node.js"]
   },
   { 
-    name: 'Home Service Platforms', 
+    name: 'Home Service Platforms (Mobile App)', 
     image: 'https://storage.googleapis.com/aai-web-samples/user-provided/600x400-b4.png', 
     hint: 'home service mobile',
-    description: "platform enables consumers to easily order services, including cleaning, pest control, plumbing, carpentry, appliance servicing and repair, painting, skincare, hair grooming and massage therapy. These services are delivered by trained and independent service professionals at the consumers’ convenience.",
+    description: "Platform enables consumers to easily order services, including cleaning, pest control, plumbing, carpentry, appliance servicing and repair, painting, skincare, hair grooming and massage therapy. These services are delivered by trained and independent service professionals at the consumers’ convenience.",
     techStack: ["Next.js", "React", "Tailwind CSS", "ShadCN UI", "TypeScript"]
   },
   {
@@ -234,6 +234,8 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
 
