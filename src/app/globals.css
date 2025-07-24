@@ -62,36 +62,13 @@
 }
 
 @layer utilities {
-  .cursor-dot,
-  .cursor-outline {
-    pointer-events: none;
+  .cursor-trail {
     position: fixed;
-    top: 0;
-    left: 0;
     border-radius: 50%;
-    opacity: 0;
+    pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-out, opacity 0.3s ease-out, width 0.3s ease-out, height 0.3s ease-out;
     z-index: 9999;
-  }
-  
-  .cursor-dot {
-    width: 8px;
-    height: 8px;
-    background-color: hsl(var(--primary));
-    transition: width 0.3s, height 0.3s, transform 0.3s, background-color 0.3s;
-  }
-  
-  .cursor-outline {
-    width: 40px;
-    height: 40px;
-    background-color: hsla(var(--primary), 0.2);
-    transition: width 0.3s, height 0.3s, transform 0.3s, border-radius 0.3s, background-color 0.3s;
-  }
-
-  html.has-cursor body:hover .cursor-dot,
-  html.has-cursor body:hover .cursor-outline {
-    opacity: 1;
   }
 
   @keyframes float {
