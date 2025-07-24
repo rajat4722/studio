@@ -136,7 +136,7 @@ export default function Home() {
               <div className="flex-1 flex flex-col justify-center text-center">
                 <h2 className="font-headline text-3xl font-bold">Expertise</h2>
                  <p className="text-sm/relaxed mt-2">
-                  I build modern, responsive, and scalable applications for web and mobile, using a diverse tech stack.
+                  I build modern, responsive, and scalable applications for both web and mobile platforms. My focus is on creating seamless user experiences powered by a diverse and robust tech stack. From crafting intuitive mobile apps with Flutter to developing powerful back-ends with Node.js, I bring a well-rounded skill set to every project.
                 </p>
               </div>
               <div className="flex flex-wrap justify-center items-center gap-6 pt-8">
