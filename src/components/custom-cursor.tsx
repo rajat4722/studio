@@ -50,8 +50,8 @@ export function CustomCursor() {
         let leader = lastMousePos;
         newPoints.forEach((point, index) => {
           const newPoint = {
-            x: lerp(point.x, leader.x, 0.25),
-            y: lerp(point.y, leader.y, 0.25)
+            x: lerp(point.x, leader.x, 0.2),
+            y: lerp(point.y, leader.y, 0.2)
           };
           newPoints[index] = newPoint;
           leader = newPoint;
