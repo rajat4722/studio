@@ -5,7 +5,6 @@ import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ProjectCarousel } from '@/components/project-carousel';
-import { TypewriterEffect } from '@/components/typewriter-effect';
 import type { Project } from '@/components/header';
 
 const CodeIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -135,11 +134,12 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           <div className="md:col-span-1 space-y-6">
-            <div className="bg-card p-8 rounded-3xl h-full flex flex-col justify-between animated-gradient text-card-foreground">
-              <div>
+            <div className="relative bg-card p-8 rounded-3xl h-full flex flex-col justify-between animated-gradient text-card-foreground overflow-hidden">
+              <CodeIcon className="w-48 h-48 text-primary absolute -right-12 -bottom-12 opacity-10 hidden md:block animate-spin-slow" />
+              <div className="z-10">
                 <p className="text-sm/relaxed">{bioText}</p>
               </div>
-              <div className="flex flex-wrap justify-start items-center gap-6 pt-8">
+              <div className="z-10 flex flex-wrap justify-start items-center gap-6 pt-8">
                 {techIcons.map((tech, i) => (
                   <div key={tech.name} className="animate-float" style={{animationDelay: `${i * 150}ms`}}>
                     {tech.icon}
