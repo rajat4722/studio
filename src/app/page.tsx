@@ -172,7 +172,7 @@ export default function Home() {
               </h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-card rounded-3xl overflow-hidden aspect-[4/3] group">
+                <div className="bg-card rounded-3xl overflow-hidden aspect-[4/3] group relative">
                   <Image
                     src="https://placehold.co/600x800.png"
                     alt="RAJAT SHUKLA"
@@ -181,6 +181,7 @@ export default function Home() {
                     className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                     data-ai-hint="man developer"
                   />
+                  <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
                 <div className="bg-card p-8 rounded-3xl flex flex-col justify-between group">
                   <div className="mb-8">
