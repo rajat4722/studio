@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from 'react';
 import { Header, ProjectsTrigger, ContactTrigger } from '@/components/header';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ProjectCarousel } from '@/components/project-carousel';
 import type { Project } from '@/components/header';
+import { cn } from '@/lib/utils';
 
 const CodeIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -126,7 +130,15 @@ const interests = [
 
 const bioText = "I build modern, responsive, and scalable applications for both web and mobile platforms. My focus is on creating seamless user experiences powered by a diverse and robust tech stack. From crafting intuitive mobile apps with Flutter to developing powerful back-ends with Node.js, I bring a well-rounded skill set to every project.";
 
+const gradientClasses = ["animated-gradient", "animated-gradient-2", "animated-gradient-3"];
+
 export default function Home() {
+  const [gradientIndex, setGradientIndex] = useState(0);
+
+  const cycleGradient = () => {
+    setGradientIndex((prevIndex) => (prevIndex + 1) % gradientClasses.length);
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground font-body">
       <Header />
@@ -134,7 +146,10 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           <div className="md:col-span-1 space-y-6">
-            <div className="relative bg-card p-8 rounded-3xl h-full flex flex-col justify-between animated-gradient text-card-foreground overflow-hidden">
+            <div
+              className={cn("relative bg-card p-8 rounded-3xl h-full flex flex-col justify-between text-card-foreground overflow-hidden cursor-pointer", gradientClasses[gradientIndex])}
+              onClick={cycleGradient}
+            >
               <CodeIcon className="w-48 h-48 text-primary absolute -right-12 -bottom-12 opacity-10 hidden md:block animate-spin-slow" />
               <div className="z-10">
                 <p className="text-sm/relaxed">{bioText}</p>
